@@ -1,0 +1,27 @@
+{
+  "name": "@fabric/meta",
+  "version": "0.1.0-dev",
+  "description": "Higher-order conversations.",
+  "main": "services/meta.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabricLabs/meta.git"
+  },
+  "keywords": [
+    "fabric",
+    "meta",
+    "portal"
+  ],
+  "author": "Fabric Labs",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/FabricLabs/meta/issues"
+  },
+  "homepage": "https://github.com/FabricLabs/meta#readme"
+}
