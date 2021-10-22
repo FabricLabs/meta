@@ -7,3 +7,6 @@
 [submodule "portal"]
 	path = portal
 	url = git@github.com:FabricLabs/portal.git
+[submodule "portal-swift"]
+	path = portal-swift
+	url = git@github.com:FabricLabs/Portal-Universal.git
