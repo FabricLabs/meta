@@ -1,0 +1,24 @@
+digraph Overview {
+  "@fabric/core"
+  "@fabric/http"
+  "@fabric/wallet"
+
+  "@fabric/core" -> "@fabric/http" [label="Core APIs"]
+  "@fabric/core" -> "@fabric/doorman" [label="Core APIs"]
+  "@fabric/core" -> "@fabric/payme" [label="Core APIs"]
+  "@fabric/core" -> "@fabric/wallet" [label="Core APIs"]
+  "@fabric/core" -> "@rpg/core" [label="Core APIs"]
+  "@fabric/core" -> "@verse/core" [label="Core APIs"]
+
+  "@fabric/http" -> "@fabric/doorman" [label="HTTP Services"]
+  "@fabric/http" -> "@fabric/payme" [label="HTTP Services"]
+  "@fabric/http" -> "@fabric/wallet" [label="HTTP Services"]
+  "@fabric/http" -> "@verse/core" [label="HTTP Services"]
+
+  "@fabric/doorman" -> "@verse/core" [label="AI Services"]
+
+  "@fabric/wallet" -> "@fabric/payme" [label="Bitcoin Integration"]
+  "@fabric/wallet" -> "@verse/core" [label="Bitcoin Integration"]
+
+  "@verse/core" -> "@rpg/core" [label="RPG 2.0"]
+}
