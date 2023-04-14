@@ -28,5 +28,9 @@
   "dependencies": {
     "@fabric/core": "FabricLabs/fabric#master",
     "@fabric/http": "FabricLabs/fabric-http#master"
+  },
+  "devDependencies": {
+    "c8": "7.13.0",
+    "mocha": "10.2.0"
   }
 }
