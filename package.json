@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/FabricLabs/meta#readme",
   "dependencies": {
-    "@fabric/core": "FabricLabs/fabric#master",
-    "@fabric/http": "FabricLabs/fabric-http#master"
+    "@fabric/core": "FabricLabs/fabric#feature/v0.1.0-RC1",
+    "@fabric/http": "FabricLabs/fabric-http#feature/v0.1.0-RC1"
   },
   "devDependencies": {
     "c8": "7.13.0",
