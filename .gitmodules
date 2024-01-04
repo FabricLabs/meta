@@ -1,6 +1,0 @@
-[submodule "marketing"]
-	path = marketing
-	url = git@github.com:FabricLabs/marketing.git
-[submodule "fabric"]
-	path = fabric
-	url = git@github.com:FabricLabs/fabric.git

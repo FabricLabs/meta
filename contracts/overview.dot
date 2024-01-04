@@ -5,20 +5,50 @@ digraph Overview {
 
   "@fabric/core" -> "@fabric/http" [label="Core APIs"]
   "@fabric/core" -> "@fabric/doorman" [label="Core APIs"]
-  "@fabric/core" -> "@fabric/payme" [label="Core APIs"]
   "@fabric/core" -> "@fabric/wallet" [label="Core APIs"]
+  "@fabric/core" -> "@payme/core" [label="Core APIs"]
   "@fabric/core" -> "@rpg/core" [label="Core APIs"]
   "@fabric/core" -> "@verse/core" [label="Core APIs"]
 
   "@fabric/http" -> "@fabric/doorman" [label="HTTP Services"]
-  "@fabric/http" -> "@fabric/payme" [label="HTTP Services"]
   "@fabric/http" -> "@fabric/wallet" [label="HTTP Services"]
+  "@fabric/http" -> "@payme/core" [label="HTTP Services"]
   "@fabric/http" -> "@verse/core" [label="HTTP Services"]
 
+  "@fabric/doorman" -> "@payme/core" [label="AI Services"]
   "@fabric/doorman" -> "@verse/core" [label="AI Services"]
 
-  "@fabric/wallet" -> "@fabric/payme" [label="Bitcoin Integration"]
+  "@fabric/wallet" -> "@payme/core" [label="Bitcoin Integration"]
   "@fabric/wallet" -> "@verse/core" [label="Bitcoin Integration"]
 
+  "@payme/core" -> "@rpg/core" [label="Payment Services"]
+
   "@verse/core" -> "@rpg/core" [label="RPG 2.0"]
+
+  subgraph cluster_ring_0 {
+    label = "Ring 0"
+    "@fabric/core"
+  }
+
+  subgraph cluster_ring_1 {
+    label = "Ring 1"
+    "@fabric/http"
+  }
+
+  subgraph cluster_ring_2 {
+    label = "Ring 2"
+    "@fabric/wallet"
+  }
+
+  subgraph cluster_ring_3 {
+    label = "Ring 3"
+    "@fabric/doorman"
+    "@payme/core"
+    "@verse/core"
+  }
+
+  subgraph cluster_ring_4 {
+    label = "Ring 4"
+    "@rpg/core"
+  }
 }
