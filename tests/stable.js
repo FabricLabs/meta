@@ -2,6 +2,7 @@
 
 // Testing
 const assert = require('assert');
+const fetch = require('cross-fetch');
 
 // NPM Packages
 const Fabric = require('@fabric/core');
@@ -33,7 +34,7 @@ describe('NPM Packages', function () {
   });
 });
 
-describe('World Wide Web', function () {
+describe('World Wide Web (WWW)', function () {
   before(async function () {
     // browser.start();
   });
@@ -43,6 +44,11 @@ describe('World Wide Web', function () {
   });
 
   describe('fabric.fm', function () {
+    it('exists via standard fetch', async function () {
+      const response = await fetch('https://fabric.fm');
+      assert.ok(response);
+    });
+
     xit('exists', async function () {
       const response = await browser._navigateTo('https://fabric.fm');
       console.log('response:', response);
@@ -51,6 +57,11 @@ describe('World Wide Web', function () {
   });
 
   describe('fabric.pub', function () {
+    it('exists via standard fetch', async function () {
+      const response = await fetch('https://fabric.pub');
+      assert.ok(response);
+    });
+
     xit('exists', async function () {
       const response = await browser._navigateTo('https://fabric.pub');
       console.log('response:', response);
@@ -58,7 +69,6 @@ describe('World Wide Web', function () {
     });
   });
 });
-
 
 describe('Fabric Types', function () {
   describe('Actor', function () {
